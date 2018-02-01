@@ -54,9 +54,16 @@
             <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active"><a>Documentation</a></li>
-                    <li class="hero"><a
-                            target="_blank" href="https://github.com/admost/amrair"><i
-                            class="fa fa-github"></i>&nbsp;&nbsp;Github</a></li>
+                    <li>
+                        <a target="_blank" href="https://github.com/admost/amrair/tree/master/AMRAirDemo">
+                            <i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;Demo Project
+                        </a>
+                    </li>
+                    <li class="hero">
+                        <a target="_blank" href="https://github.com/admost/amrair">
+                            <i class="fa fa-github"></i>&nbsp;&nbsp;Github
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!-- END Top navbar -->
@@ -109,9 +116,7 @@
                 </li>
 
                 <li><a href="#release-notes">Release Notes</a>
-
                     <ul>
-                        <li><a href="#updating-from-previous">Updating after 17.10.2017</a></li>
                         <li>
                             <a href="#versions">Versions</a>
                         </li>
@@ -336,24 +341,7 @@ config.RewardedVideoIdAndroid = &quot;&lt;Your Android Video Zone Id&gt;&quot;;
 config.RewardedVideoIdIOS = &quot;&lt;Your IOS Video Zone Id&gt;&quot;;
 
 AMRSDK.startWithConfig(config);
-                </code></pre>
-                <p>Call onApplicationPause in each of the Unity Scenes</p>
-                <pre><code class="language-c">
-void OnApplicationPause(Boolean paused)
-{
-    if (!AMRSDK.initialized())
-        return;
-
-	if (paused)
-	{
-	    AMRSDK.onPause();
-	    AMRSDK.onStop();
-	} else
-	{
-	    AMRSDK.onStart();
-	    AMRSDK.onResume();
-	}
-}</code></pre>
+                </code></pre>            
                 <h3 id="banner-ads">Banner Ads</h3>
                 <p>To create and show a banner ad run the following code</p>
                 <pre><code class="language-c">

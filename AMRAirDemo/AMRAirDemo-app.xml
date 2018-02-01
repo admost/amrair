@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<application xmlns="http://ns.adobe.com/air/application/28.0">
+    <id>com.kokteyl.amrdemo</id>
+    <versionNumber>1.0</versionNumber>
+    <filename>AMRAirDemo</filename>
+    <description></description>
+    <!-- To localize the description, use the following format for the description element.
+	<description>
+		<text xml:lang="en">English App description goes here</text>
+		<text xml:lang="fr">French App description goes here</text>
+		<text xml:lang="ja">Japanese App description goes here</text>
+	</description>
+	-->
+    <name>AMRAirDemo</name>
+    <!-- To localize the name, use the following format for the name element.
+	<name>
+		<text xml:lang="en">English App name goes here</text>
+		<text xml:lang="fr">French App name goes here</text>
+		<text xml:lang="ja">Japanese App name goes here</text>
+	</name>
+	-->
+    <copyright></copyright>
+    <initialWindow>
+        <content>AMRAirDemo.swf</content>
+        <systemChrome>standard</systemChrome>
+        <transparent>false</transparent>
+        <visible>true</visible>
+        <fullScreen>true</fullScreen>
+        <autoOrients>false</autoOrients>
+        <aspectRatio>portrait</aspectRatio>
+        <renderMode>auto</renderMode>
+    </initialWindow>
+    <customUpdateUI>false</customUpdateUI>
+    <allowBrowserInvocation>false</allowBrowserInvocation>
+    <icon></icon>
+    <iPhone>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+        <InfoAdditions><![CDATA[
+    <key>UIDeviceFamily</key>
+    <array><string>1</string></array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+    <key>NSAllowsArbitraryLoads</key><true/>
+    </dict>
+    <key>AppLovinSdkKey</key>
+<string>CD7ochHn0I53JfdWT5ZgCQTacOL2wh16w8uWrAIrSOun2WHbcrHpFqNtCkv7QwDK36ruG8kkWcUZ7mAlbRXsGw</string>
+<key>NSCalendarsUsageDescription</key>
+<string>Some ad content may access calendar</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Some ad content may access photos</string>
+
+]]></InfoAdditions>
+    </iPhone>
+    <android>
+        <colorDepth>16bit</colorDepth>
+        <manifestAdditions><![CDATA[
+			<manifest android:installLocation="auto">
+			    <!--See the Adobe AIR documentation for more information about setting Google Android permissions-->
+			    <!--Removing the permission android.permission.INTERNET will have the side effect
+		of preventing you from debugging your application on your device-->
+			    <uses-permission android:name="android.permission.INTERNET"/>
+			    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+			    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
+			    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+			    <!--The DISABLE_KEYGUARD and WAKE_LOCK permissions should be toggled together
+		in order to access AIR's SystemIdleMode APIs-->
+			    <!--<uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>-->
+			    <!--<uses-permission android:name="android.permission.WAKE_LOCK"/>-->
+			    <!--<uses-permission android:name="android.permission.CAMERA"/>-->
+			    <!--<uses-permission android:name="android.permission.RECORD_AUDIO"/>-->
+			    <!--The ACCESS_NETWORK_STATE and ACCESS_WIFI_STATE permissions should be toggled
+		together in order to use AIR's NetworkInfo APIs-->
+			    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+			    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>-->
+			    <application>
+			    <meta-data android:name="com.google.android.gms.version" android:value="10084000"/>
+			    
+			            <activity
+            android:name="admost.sdk.base.AdMostDebugActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AMRTheme.Transparent" />
+        <activity
+            android:name="admost.sdk.base.AdMostCloseOverviewActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AMRTheme.Transparent" />
+        <activity
+            android:name="admost.sdk.base.AdMostTestSuiteActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AMRTheme.Transparent" />
+        <activity
+            android:name="admost.sdk.housead.InterstitialAd"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="admost.sdk.base.AdMostFyberActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@style/AMRTheme.Transparent" />
+            
+        <activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:theme="@android:style/Theme.Translucent"/>
+
+<activity android:name="com.unity3d.ads.adunit.AdUnitActivity"  android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+<activity android:name="com.unity3d.ads.adunit.AdUnitSoftwareActivity"  android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="false" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+<activity android:name="com.applovin.adview.AppLovinInterstitialActivity" android:configChanges="orientation|screenSize" />
+<activity android:name="com.applovin.adview.AppLovinConfirmationActivity" android:configChanges="orientation|screenSize" />
+        <meta-data android:name="applovin.sdk.key"
+                   android:value="LN_kr2mUpK0zI5JgqhgM2IW5FkVtb0pxOpeDsPifkic1owhcbM-efUlwDEnpFZkdNNrDnTtVFUW2ODe_ZceD6N"  />
+                   <activity
+android:name="com.chartboost.sdk.CBImpressionActivity"
+android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+android:configChanges="keyboardHidden|orientation|screenSize"
+android:excludeFromRecents="true"
+android:hardwareAccelerated="true"/>
+
+<activity
+            android:name="com.facebook.ads.AudienceNetworkActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />       
+            
+<activity
+            android:name="com.vungle.publisher.VideoFullScreenAdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.vungle.publisher.MraidFullScreenAdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.vungle.publisher.FlexViewAdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />            
+                 
+			    
+			    </application>
+			</manifest>
+			
+		]]></manifestAdditions>
+    </android>
+    <versionLabel></versionLabel>
+    <extensions>
+        <extensionID>com.kokteyl.air.admob</extensionID>
+        <extensionID>com.kokteyl.air.applovin</extensionID>
+        <extensionID>com.kokteyl.air.facebook</extensionID>
+        <extensionID>com.kokteyl.air.vungle</extensionID>
+        <extensionID>com.kokteyl.air.unity</extensionID>
+        <extensionID>com.kokteyl.air.core</extensionID>
+    </extensions>
+</application>
