@@ -311,6 +311,64 @@
                 </div>
 
             <h4 id="application-Android-setup">Android Setup</h4>
+			<p> Add the following permissions to your Application Descriptor.xml file inside the manifestAdditions tag but outside the <application> tag:</p>
+			<pre><code class="language-markup">
+			&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
+&lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/&gt;
+&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/&gt;
+
+			</code></pre>
+			
+			<p> Add the following activities inside the <b>application</b> tag for your network selection on your manifestAdditions and update Applovin sdk key with yours if available :</p>
+
+<pre><code class="language-markup">
+&lt;!-- AMR --&gt;
+&lt;activity android:name="admost.sdk.base.AdMostDebugActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@style/AMRTheme.Transparent" /&gt;
+&lt;activity android:name="admost.sdk.base.AdMostCloseOverviewActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@style/AMRTheme.Transparent" /&gt;
+&lt;activity android:name="admost.sdk.base.AdMostTestSuiteActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@style/AMRTheme.Transparent" /&gt;
+&lt;activity android:name="admost.sdk.housead.InterstitialAd" android:configChanges="orientation|keyboardHidden|screenSize" android:hardwareAccelerated="true" /&gt;
+&lt;activity android:name="admost.sdk.base.AdMostFyberActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@style/AMRTheme.Transparent" /&gt;
+				
+&lt;!-- ADMOB --&gt;
+&lt;activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:theme="@android:style/Theme.Translucent"/&gt;
+
+&lt;!-- UNITYADS --&gt;
+&lt;activity android:name="com.unity3d.ads.adunit.AdUnitActivity"  android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /&gt;
+&lt;activity android:name="com.unity3d.ads.adunit.AdUnitSoftwareActivity"  android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="false" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /&gt;
+
+&lt;!-- APPLOVIN --&gt;
+&lt;activity android:name="com.applovin.adview.AppLovinInterstitialActivity" android:configChanges="orientation|screenSize" /&gt;
+&lt;activity android:name="com.applovin.adview.AppLovinConfirmationActivity" android:configChanges="orientation|screenSize" /&gt;
+&lt;meta-data android:name="applovin.sdk.key" android:value="&lt;YOUR SDK KEY HERE&gt;"  /&gt;
+			
+&lt;!-- CHARTBOOST --&gt;
+&lt;activity android:name="com.chartboost.sdk.CBImpressionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:hardwareAccelerated="true"/&gt;
+
+&lt;!-- FACEBOOK --&gt;
+&lt;activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="keyboardHidden|orientation|screenSize" /&gt;       
+				
+&lt;!-- VUNGLE --&gt;
+&lt;activity android:name="com.vungle.publisher.VideoFullScreenAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /&gt;
+&lt;activity android:name="com.vungle.publisher.MraidFullScreenAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" /&gt;
+&lt;activity android:name="com.vungle.publisher.FlexViewAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" /&gt;            
+				
+&lt;!-- ADCOLONY --&gt;
+&lt;activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true"/&gt;
+&lt;activity android:name="com.adcolony.sdk.AdColonyAdViewActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true"/&gt;
+								
+&lt;!-- IRONSOURCE --&gt;
+&lt;activity android:name="com.ironsource.sdk.controller.ControllerActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" /&gt;
+&lt;activity android:name="com.ironsource.sdk.controller.InterstitialActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent" /&gt;
+&lt;activity android:name="com.ironsource.sdk.controller.OpenUrlActivity" android:configChanges="orientation|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent" /&gt;
+
+&lt;!-- TAPJOY --&gt;
+&lt;activity android:name="com.tapjoy.TJAdUnitActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:hardwareAccelerated="true" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" /&gt;
+&lt;activity android:name="com.tapjoy.mraid.view.ActionHandler" android:configChanges="orientation|keyboardHidden|screenSize" /&gt;
+&lt;activity android:name="com.tapjoy.mraid.view.Browser" android:configChanges="orientation|keyboardHidden|screenSize" /&gt;
+&lt;activity android:name="com.tapjoy.TJContentActivity" android:configChanges="orientation|keyboardHidden|screenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:hardwareAccelerated="true" /&gt;
+
+</code></pre>
+		
 
             </section>
 
@@ -401,7 +459,7 @@ public function onInterstitialShow(msg:String):void {}
 public function onInterstitialDismiss(msg:String):void {}
                 </code></pre>
 
-                <h3 id="rewarded-ads">Rewerded Ads</h3>
+                <h3 id="rewarded-ads">Rewarded Ads</h3>
 
                 <p>Rewarded video ads' integration is pretty similar to Interstitial ads with 1 additional event
                     rewardedVideoComplete to reward the user.</p>
