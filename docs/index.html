@@ -345,13 +345,12 @@
 &lt;activity android:name="com.chartboost.sdk.CBImpressionActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:configChanges="keyboardHidden|orientation|screenSize" android:excludeFromRecents="true" android:hardwareAccelerated="true"/&gt;
 
 &lt;!-- FACEBOOK --&gt;
-&lt;activity android:name="com.facebook.ads.AudienceNetworkActivity" android:configChanges="keyboardHidden|orientation|screenSize" /&gt;       
+&lt;activity android:name="com.facebook.ads.AudienceNetworkActivity" android:hardwareAccelerated="true" android:configChanges="keyboardHidden|orientation|screenSize" /&gt;       
 				
-&lt;!-- VUNGLE --&gt;
-&lt;activity android:name="com.vungle.publisher.VideoFullScreenAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" /&gt;
-&lt;activity android:name="com.vungle.publisher.MraidFullScreenAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" /&gt;
-&lt;activity android:name="com.vungle.publisher.FlexViewAdActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" /&gt;            
-				
+&lt;!-- VUNGLE --&gt;	
+&lt;activity android:name="com.vungle.warren.ui.VungleActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize" android:launchMode="singleTop" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/&gt;
+&lt;android:name="com.vungle.warren.ui.VungleFlexViewActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize" android:hardwareAccelerated="true" android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent.NoTitleBar" /&gt;
+   			
 &lt;!-- ADCOLONY --&gt;
 &lt;activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true"/&gt;
 &lt;activity android:name="com.adcolony.sdk.AdColonyAdViewActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:hardwareAccelerated="true"/&gt;
