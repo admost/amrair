@@ -306,12 +306,17 @@
 
                 <div class="callout callout-danger" role="alert">
                     <h4></h4>
-                    <p>If you are integrating &nbsp;Applovin in your application. You have to edit <var>applovin.sdk.key</var> value inside <code>Plugins/Android/amr_definition/AndroidManifest.xml</code>
+                    <p>If you are integrating &nbsp;Applovin in your application, you have to add <var>AppLovinSdkKey</var> value inside your <code>Application.xml</code> file.
                     </p>
+                    <pre><code class="language-markup">
+                        &lt;AppLovinSdkKey&gt;
+&lt;YOUR_KEY&gt;
+            
+                        </code></pre>
                 </div>
 
             <h4 id="application-Android-setup">Android Setup</h4>
-			<p> Add the following permissions to your Application Descriptor.xml file inside the manifestAdditions tag but outside the <application> tag:</p>
+			<p> Add the following permissions to your Application Descriptor.xml file inside the manifestAdditions tag but outside the application tag:</p>
 			<pre><code class="language-markup">
 			&lt;uses-permission android:name="android.permission.INTERNET"/&gt;
 &lt;uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/&gt;

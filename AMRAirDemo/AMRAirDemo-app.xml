@@ -136,11 +136,15 @@ android:hardwareAccelerated="true"/>
     </android>
     <versionLabel></versionLabel>
     <extensions>
+        <extensionID>com.kokteyl.air.core</extensionID>
+        <extensionID>com.kokteyl.air.adcolony</extensionID>
         <extensionID>com.kokteyl.air.admob</extensionID>
         <extensionID>com.kokteyl.air.applovin</extensionID>
+        <extensionID>com.kokteyl.air.chartboost</extensionID>
         <extensionID>com.kokteyl.air.facebook</extensionID>
-        <extensionID>com.kokteyl.air.vungle</extensionID>
+        <extensionID>com.kokteyl.air.ironsource</extensionID>
+        <extensionID>com.kokteyl.air.tapjoy</extensionID>
         <extensionID>com.kokteyl.air.unity</extensionID>
-        <extensionID>com.kokteyl.air.core</extensionID>
+        <extensionID>com.kokteyl.air.vungle</extensionID>
     </extensions>
 </application>

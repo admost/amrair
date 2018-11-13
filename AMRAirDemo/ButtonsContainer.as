@@ -5,7 +5,7 @@
 	import flash.text.TextField;
 	import com.kokteyl.air.core.AMRSDK;
 	import com.kokteyl.air.core.AMRSdkConfig;
-	import com.kokteyl.air.core.AMRSDKBannerPosition;
+	//import com.kokteyl.air.core.AMRSDKBannerPosition;
 
 	public class ButtonsContainer extends MovieClip {
 		public function ButtonsContainer() {
@@ -73,7 +73,7 @@
 			BTNBanner.setIsEnabled(false);
 			BTNBanner.setLabelText("Loading");
 
-			AMRSDK.loadBanner(AMRSDKBannerPosition.BannerPositionBottom, true);
+			//AMRSDK.loadBanner(AMRSDKBannerPosition.BannerPositionBottom, true);
 		}
 		
 		public function onBannerReady(networkName:String):void {
