@@ -156,7 +156,8 @@
                         <tr>
                             <th>Status</th>
                             <th>Name</th>
-                            <th>Version</th>
+                            <th>iOS Version</th>
+                            <th>Android Version</th>
                             <th class="text-center" colspan="2">Download Links</th>
                         </tr>
                         </thead>
@@ -164,7 +165,8 @@
                             <tr>
                                 <td><span class="label label-danger">Required</span></td>
                                 <td>AMR Core</td>
-                                <td>2.0.0</td>
+                                <td>1.3.82</td>
+                                <td>1.7.8</td>
                                 <td colspan="2" class="text-center">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrCore.ane">
                                     <button type="button" class="btn btn-outline btn-block btn-primary">
@@ -177,7 +179,8 @@
                             <tr>
                                 <td><span class="label label-success">Optional</span></td>
                                 <td>Adcolony</td>
-                                <td>1.0.0</td>
+                                <td>-</td>
+                                <td>3.3.5</td>
                                 <td colspan="2" class="text-right">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrAdcolony.ane">
                                     <button type="button" class="btn btn-outline btn-block btn-success">
@@ -189,7 +192,8 @@
                             <tr>
                                 <td><span class="label label-success">Optional</span></td>
                                 <td>Admob</td>
-                                <td>2.0.0</td>
+                                <td>7.35.1.0</td>
+                                <td>15.0.1</td>
                                 <td colspan="2" class="text-center">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrAdmob.ane">
                                     <button type="button" class="btn btn-outline btn-block btn-primary">
@@ -202,7 +206,8 @@
                             <tr>
                                 <td><span class="label label-success">Optional</span></td>
                                 <td>Applovin</td>
-                                <td>2.0.0</td>
+                                <td>5.1.2.0</td>
+                                <td>8.1.3</td>
                                 <td colspan="2" class="text-center">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrApplovin.ane">
                                     <button type="button" class="btn btn-outline btn-block btn-primary">
@@ -215,7 +220,8 @@
                             <tr>
                                 <td><span class="label label-success">Optional</span></td>
                                 <td>Chartboost</td>
-                                <td>1.0.0</td>
+                                <td>-</td>
+                                <td>7.2.1</td>
                                 <td colspan="2" class="text-right">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrChartboost.ane">
                                     <button type="button" class="btn btn-outline btn-block btn-success">
@@ -227,20 +233,21 @@
                             <tr>
                                 <td><span class="label label-success">Optional</span></td>
                                 <td>Facebook</td>
-                                <td>1.0.0</td>
+                                <td>-</td>
+                                <td>5.0.0</td>
                                 <td colspan="2" class="text-center">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrFacebook.ane">
-                                    <button type="button" class="btn btn-outline btn-block btn-primary">
-                                        <i style="padding-right: 16px;" class="fa fa-android"></i>/
-                                        <i style="padding-left: 16px;" class="fa fa-apple"></i>
-                                    </button>
+                                        <button type="button" class="btn btn-outline btn-block btn-success">
+                                            <i class="fa fa-android"></i>
+                                        </button>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td><span class="label label-success">Optional</span></td>
                                 <td>Ironsource</td>
-                                <td>1.0.0</td>
+                                <td>-</td>
+                                <td>6.7.11</td>
                                 <td colspan="2" class="text-right">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrIronsource.ane">
                                     <button type="button" class="btn btn-outline btn-block btn-success">
@@ -252,7 +259,8 @@
                             <tr>
                                 <td><span class="label label-success">Optional</span></td>
                                 <td>Tapjoy</td>
-                                <td>1.0.0</td>
+                                <td>-</td>
+                                <td>12.0.0</td>
                                 <td colspan="2" class="text-right">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrTapjoy.ane">
                                     <button type="button" class="btn btn-outline btn-block btn-success">
@@ -264,7 +272,8 @@
                             <tr>
                                 <td><span class="label label-success">Optional</span></td>
                                 <td>Unity Ads</td>
-                                <td>2.0.0</td>
+                                <td>2.3.0.0</td>
+                                <td>2.3.0</td>
                                 <td colspan="2" class="text-center">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrUnity.ane">
                                     <button type="button" class="btn btn-outline btn-block btn-primary">
@@ -277,7 +286,8 @@
                             <tr>
                                 <td><span class="label label-success">Optional</span></td>
                                 <td>Vungle</td>
-                                <td>2.0.0</td>
+                                <td>6.3.1.1</td>
+                                <td>6.3.17</td>
                                 <td colspan="2" class="text-center">
                                     <a href="https://github.com/admost/amrair/raw/master/packages/amrVungle.ane">
                                     <button type="button" class="btn btn-outline btn-block btn-primary">
@@ -422,7 +432,7 @@ AMRSDK.startWithConfig(config);
                 <h3 id="banner-ads">Banner Ads</h3>
                 <p>To create and show a banner ad run the following code</p>
                 <pre><code class="language-c">
-                    AMRSDK.loadBanner(AMRSDKBannerPosition.BannerPositionBottom, true);
+                    AMRSDK.loadBanner(0, true); //0 top, 1 bottom
                 </code></pre>
                 <p>If you want to show a banner manually after it has loaded, pass false as the second parameter of
                     loadBanner method and wait for the onBannerReady callback. Then call showbanner method to show
