@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>AMR - Air GDPR</title>
+
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/skin/skin-yellow.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet'
+          type='text/css'>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Favicons -->
+    <link rel="icon" href="https://dashboard.admost.com/Assets/img/admostfavicon.png">
+</head>
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+
+<header class="site-header navbar-transparent sticky">
+
+    <!-- Top navbar & branding -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+
+            <!-- Toggle buttons and brand -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="true" aria-controls="navbar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                </button>
+
+                <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://admost.github.io"><img src="assets/img/logo-white.svg?v=1" alt="logo"></a>
+
+            </div>
+            <!-- END Toggle buttons and brand -->
+
+            <!-- Top navbar -->
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Documentation</a></li>
+                    <li class="active"><a href="gdpr.html">GDPR</a></li>
+                    <li><a href="release-notes.html">Release Notes</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li>
+                        <a target="_blank" href="https://github.com/admost/amrair/tree/master/AMRAirDemo">
+                            <i class="fa fa-mobile-phone"></i>&nbsp;&nbsp;Demo Project
+                        </a>
+                    </li>
+                    <li class="hero">
+                        <a target="_blank" href="https://github.com/admost/amrair">
+                            <i class="fa fa-github"></i>&nbsp;&nbsp;Github
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- END Top navbar -->
+        </div>
+    </nav>
+    <!-- END Top navbar & branding -->
+
+</header>
+
+
+<main class="container">
+    <div class="row">
+
+        <!-- Sidebar -->
+        <aside class="col-sm-2 sidebar">
+            <ul class="nav sidenav dropable sticky">
+                <li>
+                    <a href="#gdpr">GDPR</a>
+                    <ul>
+                        <li><a href="#networkcomplience">Network GDPR Complience</a></li>
+                        <li><a href="#gdprrules">GDPR Rules</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+        <!-- End Sidebar -->
+
+
+        <!-- Main content -->
+        <article class="col-sm-8 main-content" role="main">
+            <!-- GDPR -->
+            <section>
+                <h2 id="gdpr">GDPR</h2>
+
+                <p>We specified your responsibilities for obtaining consent from end-users of your apps in our updated
+                    <a href="https://resources.admost.com/privacy-policy/">Privacy Policy</a>. By updating GDPR compatible SDK
+                    you agree that you’re responsible for inform the end-users and take their consent.
+                    Please note that the consent collection applies only to users located in the European Economic Area,
+                    the United Kingdom, and Switzerland.
+                    As data controller you should take consent of end-users by preparing consent window, you can find
+                    samples below. When you take end-user consent, the response will be passed to Admost SDK.
+                    You can find the implementation <a href="#init">here</a> </p>
+                <img class="img-responsive" src="assets/img/consent.png" alt="consent">
+                <h3 id="networkcomplience">Network GDPR Complience</h2>
+
+                    <table class="table table-bordered table-striped table-info" style="width:300px ">
+                        <tr>
+                            <th align="center">Ad Network </th>
+                            <th align="center">Android</th>
+                            <th align="center">IOS</th>
+                        </tr>
+                        <tr>
+                            <td>AdColony</td>
+                            <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>AdMob</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Adtiming</td>
+                            <td></td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Amazon</td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                        </tr>
+                        <tr>
+                            <td>AppLovin</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Appnext</td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        <tr>
+                            <td>ChartBoost</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+
+                        <tr>
+                            <td>Facebook</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Flurry</td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Fyber</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>InMobi</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+
+                        <tr>
+                            <td>IronSource</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>LeadBolt</td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                            <td> </td>
+                        </tr>
+                        <tr>
+                            <td>LoopMe</td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Mobfox</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Mopub</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Nexage</td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Smaato</td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+                        </tr>
+                        <tr>
+                            <td>StartApp</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Tapjoy</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>UnityAds</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+                        <tr>
+                            <td>Vungle</td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                            <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+                        </tr>
+
+
+                        </tr>
+                        </tr>
+
+                    </table>
+
+                    <h3 id="gdprrules">GDPR Rules</h3>
+
+                    <p>Admost provides two methods for GDPR compatibility: <code>config.SubjectToGDPR</code> and
+                        <code>config.UserConsent</code>.</p>
+                    <p>Publisher have to set <code>config.SubjectToGDPR = "1"</code> if the user is located in European
+                        Union. Otherwise, publisher have to set <code>config.SubjectToGDPR = "0"</code> . If publisher
+                        does not use this method, SubjectToGDPR status remains as unknown. In this case, Admost SDK
+                        automatically determines whether the user is in EU or not which is totally under responsibility
+                        of the publisher. If user is in EU, networks are not allowed to show personalized ads. If the
+                        user is not located in EU, the ad networks are allowed to show personalized ads. </p>
+                    <p>On condition that, the publisher obtains neither user's SubjectToGDPR status nor any negative
+                        legal consequences, SubjectToGDPR must set <code>config.SubjectToGDPR = "1"</code> for each
+                        user. In this case, Admost considers all users as subject to GDPR and if the consent is not
+                        allowed, Admost blocks ad networks to collect data from users. Which may cause a decrease on
+                        overall revenue performance apart from Admost. </p>
+                    <p>If the publisher obtains user's consent and sets <code>config.UserConsent = "1"</code>,
+                        personalized ads would be shown to the users. Otherwise, the publisher sets
+                        <code>config.UserConsent = "0"</code> which would block the personalized ads, unless the user is
+                        not subject to GDPR.</p>
+                    <p>If the publisher does not use <code>config.UserConsent</code> method , userConsent status remains
+                        unknown. In this case, if the publisher provides <code>config.SubjectToGDPR = "1"</code>, the ad
+                        networks do not have ability to serve personalized ads.If the publisher provides <code>
+                            config.SubjectToGDPR = "0"</code>, the ad networks have ability to serve personalized ads.
+                    </p>
+                    <p>If the publisher does not provide both <code>config.UserConsent</code> and
+                        <code>config.SubjectToGDPR</code>, Admost decides whether the user is located in EU or not which
+                        is totally under responsibility of the publisher. </p>
+                    <p>If the publisher wants to obtain neither the user's consent nor any negative legal consequences,
+                        the publisher must set <code>config.UserConsent = "0"</code> for every user. In this case,
+                        Admost considers the user has no consent, the ad networks are not allowed to serve personalized
+                        ads, except only the publisher does not provide <code>config.SubjectToGDPR = "0" </code>.</p>
+            </section>
+            <!-- End GDPR -->
+        </article>
+
+        <!-- Sidebar 2 -->
+        <aside class="col-sm-2 sidebar">
+            <ul class="nav sidenav dropable sticky right-side" style="width:245px;">
+
+                <div class="panel panel-default" id="myPanel" style="display:none">
+                    <div class="panel-body">
+                        <table class="table table-striped table-changelog" id="selectedTable">
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="panel-footer" style="position:relative; height:50px; ">
+                        <td> <button type="button" id="downloadButton" onclick="downloadPackage();" class="btn btn-info"
+                                style="background-color:#2AC3AC; position:absolute; left:10px; bottom:10px; ">Download
+                                &nbsp; <span class="fa fa-download" ;></span></button> </td>
+
+                        <td> <button type="button" id="downloadButton2" onclick="closeList();" class="btn btn-warning"
+                                style="position:absolute; right:10px; bottom:10px;">Clear</button> </td>
+
+                    </div>
+                </div>
+                <!--
+				   <div class="callout callout-success" role="alert" id="selectedList" style="display:none; position:relative;" >
+					<h4></h4>
+                    <span id="unityCoreSelects"></span>  </br>
+
+
+
+					<b>Android: </b> <span id="andSelects">  </span> </br>
+					<b>Ios:	</b> <span id="iosSelects">  </span> </br> </br>
+
+
+
+							<button type="button" id="downloadButton" onclick="downloadPackage();" class="btn btn-info" style="background-color:#2AC3AC; float:bottom;">Download</button>
+
+							<button type="button" id="downloadButton" onclick="closeList();" class="btn btn-info" style="background-color:#2AC3AC; margin-left:20px; float:right;">Close</button>
+
+					</div>
+					-->
+            </ul>
+
+        </aside>
+        <!-- End Sidebar 2 -->
+
+        <!-- END Main content -->
+    </div>
+</main>
+
+ 
+
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <p>Copyright &copy; 2017. All right reserved</p>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <ul class="footer-menu">
+                    <li><a href="http://admost.github.io/amrandroid">Android integration</a></li>
+                    <li><a href="http://admost.github.io/amrios">iOS integration</a></li>
+                    <li><a href="http://admost.github.io/amrunity">Unity integration</a></li>
+                    <li><a href="mailto:amr@admost.com">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END Footer -->
+
+<!-- Scripts -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
+</script>
+<script>function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
+</script>
+
+<script src="adnetworks.js" type="text/javascript"></script>
+<script src="assets/js/theDocs.all.min.js"></script>
+<script src="assets/js/custom.js"></script>
+
+</body>
+</html>
