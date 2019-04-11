@@ -112,7 +112,9 @@
                 <li><a href="#extras">Extras</a>
                     <ul>
                         <li><a href="#testsuite">Test Suite</a></li>
-						<li><a href="#iap">In App Purchase Tracking</a></li>
+                        <li><a href="#iap">In App Purchase Tracking</a></li>
+                        <li><a href="#senduserid">Setting Application User Id</a></li>
+                        <li><a href="#setadjustuserid">Setting Adjust User Id</a></li>
                     </ul>
                 </li>
 
@@ -658,18 +660,32 @@ AMR.AMRSDK.trackPurchaseForIOS(transactionId:String,
 			       currencyCode:String);
                     </code></pre>
                 <ul>
-                    <li><b>transactionId</b> – A unique identifier for this product's transaction
-                    </li>
-                    <li><b>localizedPrice</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol.
-
-                    </li>
-
-                    <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
-
-                    </li>
-
-
+                    <li><b>transactionId</b> – A unique identifier for this product's transaction </li>
+                    <li><b>localizedPrice</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol. </li>
+                    <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD. </li>
                 </ul>
+
+                <h3 id="senduserid">Setting Application User Id</h3>
+
+                <p>
+                    You can use the following method to set application specific user id in AMR Analytics for enhanced
+                    tracking of your users. You have to call this method after initialization.
+                </p>
+
+                <pre><code class="language-c">
+AMR.AMRSDK.setUserId(&quot;&lt;applicationUserId&gt;&quot;);
+                </code></pre>
+
+                <h3 id="setadjustuserid">Setting Adjust User Id</h3>
+
+                <p>
+                    You can use the following method to set adjust user id in Admost Analytics for enhanced tracking of
+                    your users. You have to call this method after initialization.
+                </p>
+
+                <pre><code class="language-c">
+AMR.AMRSDK.setAdjustUserId(&quot;&lt;adjustUserId&gt;&quot;);
+                </code></pre>
 			
 
             <h2 id="release-notes">Release Notes</h2>
