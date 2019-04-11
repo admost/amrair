@@ -112,6 +112,7 @@
                 <li><a href="#extras">Extras</a>
                     <ul>
                         <li><a href="#testsuite">Test Suite</a></li>
+						<li><a href="#iap">In App Purchase Tracking</a></li>
                     </ul>
                 </li>
 
@@ -584,7 +585,7 @@ var version:String = Capabilities.version.substr(0,3);
 
 // Call method with tested zone ids
 if (version == "IOS")
-    AMRSDK.startTestSuite(new Array("IOS_ZONE_ID", "ANOTHER_IOS_ZONE_ID"));
+    AMR.AMRSDK.startTestSuite(new Array("IOS_ZONE_ID", "ANOTHER_IOS_ZONE_ID"));
 
 if (version == "AND")
     AMR.AMRSDK.startTestSuite(new Array("ANDROID_ZONE_ID", "ANOTHER_ANDROID_ZONE_ID"));
@@ -615,6 +616,61 @@ if (version == "AND")
 
 
             </div>
+			
+			<h3 id="iap">In App Purchase Tracking</h3>
+                <p>
+                    The following call is used to track purchases with receipt validation:
+                </p>
+
+                <div class="promo left small-icon">
+                    <i class="fa fa-android" style="color: #00af97"></i>
+                    <h3>Android</h3>
+                </div>
+
+                <pre><code class="language-c">
+//Product refers Adobe Air Milkman in-app billing extension linked below
+//https://www.adobe.com/devnet/air/articles/android-billing-ane.html
+AMR.AMRSDK.trackPurchaseForAndroid(jsonData:String, 
+				   signature:String, 
+				   priceAmountMicros:Number, 
+				   currencyCode:String);
+                    </code></pre>
+
+                <ul>
+                    <li><b>jsonData</b> – The purchase receipt for this product
+                    </li>
+					<li><b>signature</b> – String containing the signature of the purchase data
+                    </li>
+                    <li><b>priceAmountMicros</b> – Price in micro-units, where 1,000,000 micro-units equal one unit of the currency.
+                    </li>
+                    <li><b>currencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
+                    </li>
+                </ul>
+
+                <div class="promo left small-icon">
+                    <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                    <h3>iOS</h3>
+                </div>
+
+                <pre><code class="language-c">
+AMR.AMRSDK.trackPurchaseForIOS(transactionId:String, 
+			       localizedPrice:Number, 
+			       currencyCode:String);
+                    </code></pre>
+                <ul>
+                    <li><b>transactionId</b> – A unique identifier for this product's transaction
+                    </li>
+                    <li><b>localizedPrice</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol.
+
+                    </li>
+
+                    <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
+
+                    </li>
+
+
+                </ul>
+			
 
             <h2 id="release-notes">Release Notes</h2>
             <header>
