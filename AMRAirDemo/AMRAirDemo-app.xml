@@ -158,6 +158,5 @@ android:hardwareAccelerated="true"/>
         <extensionID>com.kokteyl.air.unity</extensionID>
         <extensionID>com.kokteyl.air.vungle</extensionID>
         <extensionID>com.kokteyl.air.tapjoy</extensionID>
-        <extensionID>com.kokteyl.air.ironsource</extensionID>
     </extensions>
 </application>
