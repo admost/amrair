@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<application xmlns="http://ns.adobe.com/air/application/28.0">
+<application xmlns="http://ns.adobe.com/air/application/33.1">
     <id>com.kokteyl.amrdemo</id>
     <versionNumber>1.0</versionNumber>
     <filename>AMRAirDemo</filename>
@@ -36,20 +36,36 @@
     <iPhone>
         <requestedDisplayResolution>high</requestedDisplayResolution>
         <InfoAdditions><![CDATA[
-    <key>UIDeviceFamily</key>
-    <array><string>1</string></array>
-    <key>NSAppTransportSecurity</key>
-    <dict>
-    <key>NSAllowsArbitraryLoads</key><true/>
-    </dict>
-    <key>AppLovinSdkKey</key>
-<string>CD7ochHn0I53JfdWT5ZgCQTacOL2wh16w8uWrAIrSOun2WHbcrHpFqNtCkv7QwDK36ruG8kkWcUZ7mAlbRXsGw</string>
-<key>NSCalendarsUsageDescription</key>
-<string>Some ad content may access calendar</string>
-<key>NSPhotoLibraryUsageDescription</key>
-<string>Some ad content may access photos</string>
+            <key>MinimumOSVersion</key>
+            <string>11.0</string>
+            
+            <key>UIDeviceFamily</key>
+            <array><string>1</string></array>
+            
+            <key>NSAppTransportSecurity</key>
+            <dict>
+            
+            <key>NSAllowsArbitraryLoads</key><true/>
+            </dict>
+            
+            <key>GADApplicationIdentifier</key>
+            <string>ca-app-pub-3940256099942544~1458002511</string>
+            
+            <key>AppLovinSdkKey</key>
+        <string>CD7ochHn0I53JfdWT5ZgCQTacOL2wh16w8uWrAIrSOun2WHbcrHpFqNtCkv7QwDK36ruG8kkWcUZ7mAlbRXsGw</string>
+        
+        <key>NSCalendarsUsageDescription</key>
+        <string>Some ad content may access calendar</string>
+        
+        <key>NSPhotoLibraryUsageDescription</key>
+        <string>Some ad content may access photos</string>
 
 ]]></InfoAdditions>
+        <!--
+<Entitlements>
+	<![CDATA[<key>keychain-access-groups</key><array><string>...</string></array>]]>
+</Entitlements>
+-->
     </iPhone>
     <android>
         <colorDepth>16bit</colorDepth>
@@ -137,14 +153,11 @@ android:hardwareAccelerated="true"/>
     <versionLabel></versionLabel>
     <extensions>
         <extensionID>com.kokteyl.air.core</extensionID>
-        <extensionID>com.kokteyl.air.adcolony</extensionID>
         <extensionID>com.kokteyl.air.admob</extensionID>
         <extensionID>com.kokteyl.air.applovin</extensionID>
-        <extensionID>com.kokteyl.air.chartboost</extensionID>
-        <extensionID>com.kokteyl.air.facebook</extensionID>
-        <extensionID>com.kokteyl.air.ironsource</extensionID>
-        <extensionID>com.kokteyl.air.tapjoy</extensionID>
         <extensionID>com.kokteyl.air.unity</extensionID>
         <extensionID>com.kokteyl.air.vungle</extensionID>
+        <extensionID>com.kokteyl.air.tapjoy</extensionID>
+        <extensionID>com.kokteyl.air.ironsource</extensionID>
     </extensions>
 </application>
