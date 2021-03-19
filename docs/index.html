@@ -99,6 +99,9 @@
                     <ul>
                         <li><a href="#application-iOS-setup">iOS Setup</a>
                             <ul style="display: block;">
+                                <li><a href="#skadnetwork">SKAdNetwork <span class="label label-teal">New</span></a></li>
+                            </ul>
+                            <ul style="display: block;">
                                 <li><a href="#ios14">iOS 14 <span class="label label-teal">New</span></a></li>
                             </ul>
                         </li>
@@ -333,6 +336,12 @@
                 </div>
 
                 <h4 id="application-iOS-setup">iOS Setup</h4>
+                <br>
+                <h5 id="skadnetwork"><span class="label label-teal">New</span> SKAdNetwork</h5>
+                <p>With the iOS 14, you need to add <code>SKAdNetwork</code> ids to your <code>Application.xml</code> file to support conversion tracking.</p>
+
+                <p> See <a href="https://admost.github.io/amrios/#create-your-podfile-and-install" target="_blank">AMR iOS </a> to get SKAdNetwork List.</p>
+                <br>
                 <p> Add following lines to your <code>Application.xml</code> file.</p>
 
                 <pre><code class="language-markup">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
