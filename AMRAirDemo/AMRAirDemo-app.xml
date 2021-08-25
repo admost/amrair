@@ -1,10 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <application xmlns="http://ns.adobe.com/air/application/33.1">
     <id>com.kokteyl.amrdemo</id>
     <versionNumber>1.0</versionNumber>
     <filename>AMRAirDemo</filename>
-    <description></description>
-    <!-- To localize the description, use the following format for the description element.
+    <description/>
+    
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- To localize the description, use the following format for the description element.
 	<description>
 		<text xml:lang="en">English App description goes here</text>
 		<text xml:lang="fr">French App description goes here</text>
@@ -12,14 +66,68 @@
 	</description>
 	-->
     <name>AMRAirDemo</name>
-    <!-- To localize the name, use the following format for the name element.
+    
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <!-- To localize the name, use the following format for the name element.
 	<name>
 		<text xml:lang="en">English App name goes here</text>
 		<text xml:lang="fr">French App name goes here</text>
 		<text xml:lang="ja">Japanese App name goes here</text>
 	</name>
 	-->
-    <copyright></copyright>
+    <copyright/>
     <initialWindow>
         <content>AMRAirDemo.swf</content>
         <systemChrome>standard</systemChrome>
@@ -32,7 +140,7 @@
     </initialWindow>
     <customUpdateUI>false</customUpdateUI>
     <allowBrowserInvocation>false</allowBrowserInvocation>
-    <icon></icon>
+    <icon/>
     <iPhone>
         <requestedDisplayResolution>high</requestedDisplayResolution>
         <InfoAdditions><![CDATA[
@@ -61,7 +169,61 @@
         <string>Some ad content may access photos</string>
 
 ]]></InfoAdditions>
-        <!--
+        
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <!--
 <Entitlements>
 	<![CDATA[<key>keychain-access-groups</key><array><string>...</string></array>]]>
 </Entitlements>
@@ -89,8 +251,10 @@
 			    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 			    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>-->
 			    <application>
-			    <meta-data android:name="com.google.android.gms.version" android:value="10084000"/>
-			    
+			    <meta-data android:name="com.google.android.gms.version" android:value="12451000"/>
+			    <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3297656589511112~8863280981"/>
 			            <activity
             android:name="admost.sdk.base.AdMostDebugActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -114,8 +278,8 @@
             
         <activity android:name="com.google.android.gms.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:theme="@android:style/Theme.Translucent"/>
 
-<activity android:name="com.unity3d.ads.adunit.AdUnitActivity"  android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-<activity android:name="com.unity3d.ads.adunit.AdUnitSoftwareActivity"  android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="false" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+<activity android:name="com.unity3d.services.ads.adunit.AdUnitActivity"  android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="true" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+<activity android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity"  android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:hardwareAccelerated="false" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 <activity android:name="com.applovin.adview.AppLovinInterstitialActivity" android:configChanges="orientation|screenSize" />
 <activity android:name="com.applovin.adview.AppLovinConfirmationActivity" android:configChanges="orientation|screenSize" />
         <meta-data android:name="applovin.sdk.key"
@@ -143,20 +307,97 @@ android:hardwareAccelerated="true"/>
             android:name="com.vungle.publisher.FlexViewAdActivity"
             android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
             android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />            
-                 
+                
+<activity
+  android:name="com.tapjoy.TJAdUnitActivity"
+  android:configChanges="orientation|keyboardHidden|screenSize"
+  android:hardwareAccelerated="true"
+  android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+<activity
+  android:name="com.tapjoy.TJContentActivity"
+  android:configChanges="orientation|keyboardHidden|screenSize"
+  android:theme="@android:style/Theme.Translucent.NoTitleBar"
+  android:hardwareAccelerated="true" />			
+
+<activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
+android:configChanges="keyboardHidden|orientation|screenSize"
+android:hardwareAccelerated="true"/>
+<activity android:name="com.adcolony.sdk.AdColonyAdViewActivity"
+android:configChanges="keyboardHidden|orientation|screenSize"
+android:hardwareAccelerated="true"/>  
 			    
 			    </application>
 			</manifest>
 			
 		]]></manifestAdditions>
     </android>
-    <versionLabel></versionLabel>
-    <extensions>
-        <extensionID>com.kokteyl.air.core</extensionID>
-        <extensionID>com.kokteyl.air.admob</extensionID>
-        <extensionID>com.kokteyl.air.applovin</extensionID>
-        <extensionID>com.kokteyl.air.unity</extensionID>
-        <extensionID>com.kokteyl.air.vungle</extensionID>
-        <extensionID>com.kokteyl.air.tapjoy</extensionID>
-    </extensions>
+    <versionLabel/>
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <extensions>
+    <extensionID>com.kokteyl.air.core</extensionID>
+    <extensionID>com.kokteyl.air.adcolony</extensionID>
+    <extensionID>com.kokteyl.air.admob</extensionID>
+    <extensionID>com.kokteyl.air.facebook</extensionID>
+    <extensionID>com.kokteyl.air.tapjoy</extensionID>
+    <extensionID>com.kokteyl.air.unity</extensionID>
+    <extensionID>com.amazon.device.iap.cpt.AmazonIapV2Extension</extensionID>
+    <extensionID>androidx.browser</extensionID>
+    <extensionID>androidx.cardview</extensionID>
+    <extensionID>androidx.core</extensionID>
+    <extensionID>androidx.vectordrawable</extensionID>
+    <extensionID>com.distriqt.Core</extensionID>
+    <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
+    <extensionID>com.distriqt.playservices.Base</extensionID>
+    <extensionID>com.google.android.play</extensionID>
+    <extensionID>com.distriqt.Bolts</extensionID>
+    <extensionID>com.distriqt.CustomResources</extensionID>
+    <extensionID>com.distriqt.Application</extensionID>
+    <extensionID>com.distriqt.playservices.Auth</extensionID>
+    <extensionID>com.distriqt.PushNotifications</extensionID>
+    <extensionID>com.distriqt.IDFA</extensionID>
+    <extensionID>com.android.installreferrer</extensionID>
+    <extensionID>com.distriqt.NetworkInfo</extensionID>
+    <extensionID>com.distriqt.playservices.Location</extensionID>
+    <extensionID>com.distriqt.playservices.Analytics</extensionID>
+    <extensionID>com.google.dagger</extensionID>
+    <extensionID>androidx.appcompat</extensionID>
+  </extensions>
 </application>
